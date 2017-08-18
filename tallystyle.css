@@ -1,0 +1,319 @@
+@font-face {
+	font-family:Digital;
+	src:url('../fonts/DS-DIGI.TTF');
+}
+@font-face {
+	font-family:Bebas;
+	src:url('../fonts/BebasNeue.otf');
+}
+
+#counter0 { display: none; }
+.counter {
+	background: url('images/largebg.png');
+	width:340px;
+	text-align:center;
+	margin:10px;
+	height:265px;
+	position: relative;
+	float: left;
+}
+
+.name {
+	font-family: 'Bebas', sans-serif;
+	width: 100%;
+	text-align: center;
+	color: white;
+	margin: 2px;
+	padding: 10px 0 0 0;
+	font-size: 20px;
+}
+
+.count {
+	height: 55px;
+	width: 300px;
+	padding: 10px;
+	margin: 0px auto;
+	background: url('images/input.png') no-repeat center;
+	position: relative;
+}
+
+.tally {
+	width: 290px;
+	height: 32px;
+	font-family:'Digital', sans-serif;
+	font-size: 30px;
+	font-weight:bold;
+	color:.000;
+	text-align:right;
+	padding-top:12px;
+}
+
+.message {
+  font-family: 'Bebas', sans-serif;
+  position: absolute;
+  top: 30px;
+  color: .666;
+  left: 25px;
+  font-size: 14px;
+  font-style: italic;
+}
+.message.error { color: red; }
+.message.green { color: green; }
+
+/* Image sources */
+.btns button { background: none; border: none;}
+
+/*** subBtn ***/
+	.btns .subBtn .fullsize {
+		width: 144px; height: 44px;
+		background-image: url('images/subtractbtn.png');
+	}
+	.btns .subBtn .fullsize:hover,
+	.btns .subBtn .fullsize:active {
+		background-image: url('images/subtractbtnpress.png');
+	}
+	.btns .subBtn .small {
+		width: 130px; height: 44px;
+		background-image: url('images/smallsubtract.png')
+	}
+	.btns .subBtn .small:hover,
+	.btns .subBtn .small:active {
+		background-image: url('images/smallsubtractpress.png');
+	}
+
+/*** addBtn ***/
+	.btns .addBtn .fullsize {
+		width: 144px; height: 44px;
+		background-image: url('images/addbtn.png');
+	}
+	.btns .addBtn .fullsize:hover,
+	.btns .addBtn .fullsize:active {
+		background-image: url('images/addbtnpress.png');
+	}
+	.btns .addBtn .small {
+		background-image: url('images/smalladd.png')
+	}
+	.btns .addBtn .small:hover,
+	.btns .addBtn .small:active {
+		background-image: url('images/smalladdpress.png');
+	}
+
+/*** resetCount ***/
+	.btns .resetCount.fullsize {
+		width: 42px; height: 42px;
+		background-image: url('images/resetbtn.png');
+	}
+	.btns .resetCount.fullsize:hover,
+	.btns .resetCount.fullsize:active {
+		background-image: url('images/resetbtnpress.png');
+	}
+	.btns .resetCount.small {
+		background-image: url('images/smallreset.png')
+	}
+	.btns .resetCount.small:hover,
+	.btns .resetCount.small:active {
+		background-image: url('images/smallresetpress.png');
+	}
+
+/*** startVal ***/
+	.btns .startVal .fullsize {
+		width: 143px; height: 47px;
+		background-image: url('images/startvalue.png');
+	}
+	.btns .startVal .fullsize:hover,
+	.btns .startVal .fullsize:active {
+		background-image: url('images/startvaluepress.png');
+	}
+	.btns .startVal .small {
+		background-image: url('images/smallstart.png')
+	}
+	.btns .startVal .small:hover,
+	.btns .startVal .small:active {
+		background-image: url('images/smallstartpress.png');
+	}
+
+/*** renameCounter ***/
+	.btns .renameCounter .fullsize {
+		width: 143px; height: 47px;
+		background-image: url('images/countername.png');
+	}
+	.btns .renameCounter .fullsize:hover,
+	.btns .renameCounter .fullsize:active {
+		background-image: url('images/counternamepress.png');
+	}
+	.btns .renameCounter .small {
+		background-image: url('images/smallcountername.png')
+	}
+	.btns .renameCounter .small:hover,
+	.btns .renameCounter .small:active {
+		background-image: url('images/smallcounternamepress.png');
+	}
+
+.btns .setStartValueBtn .fullsize {
+	background-image: url('images/setinputbtnleft.png');
+}
+/*.btns .setStartValueBtn .fullsize:hover,
+.btns .setStartValueBtn .fullsize:active {
+	background-image: url('images/setinputbtnleftpress.png');
+}*/
+.btns .setStartValueBtn .small,
+.btns .renameInputBtn .small {
+	width: 41px; height:43px;
+	background-image: url('images/smallsetbtn.png')
+}
+/*.btns .setStartValueBtn .small:hover,
+.btns .setStartValueBtn .small:active,
+.btns .renameInputBtn .small:hover,
+.btns .renameInputBtn .small:active {
+	background-image: url('images/smallsetbtnpress.png');
+}*/
+
+
+.btns .renameInputBtn .fullsize {
+	background-image: url('images/setinputbtnright.png');
+}
+/*.btns .renameInputBtn .fullsize:hover,
+.btns .renameInputBtn .fullsize:active {
+	background-image: url('images/setinputbtnrightpress.png');
+}*/
+
+
+/* Button/Image positioning */
+
+.btns {
+	position: relative;
+}
+.btns div button, .resetCount {
+	cursor: pointer;
+}
+
+.btns .small { display: none; }
+
+.btns .row {
+	position: relative;
+	display: inline;
+}
+.btns .row .leftElement {
+	float:left;
+	margin-left: 20px;
+	margin-top: 3px;
+}
+.btns .row .rightElement {
+	float:right;
+	margin-right: 20px;
+	margin-top: 3px;
+}
+.btns .row .centerElement {
+  position: absolute;
+  top: 29px;
+  left: -20px;
+}
+
+.btns input[type=text] {
+	background: none;
+	border: none;
+	height: 35px;
+	width: 100px;
+	background: url("images/set-input-bg.png") repeat-x;
+	text-indent: 10px;
+    font-family: 'Bebas', sans-serif;
+}
+.inputDiv {position: relative;}
+.setInputBtn .fullsize { position: absolute; top: 0; width: 38px; height: 47px;}
+.leftElement .setInputBtn .fullsize { right: -34px; }
+.rightElement .setInputBtn .fullsize { left: -31px; top: -1px; }
+
+.leftElement input { margin-left: 10px; margin-top: 3px;}
+.rightElement input { margin-right: 10px; margin-top: 3px;}
+.inputDiv input.error { border: 1px solid red !important;}
+
+.renameInput, .startValueInput {
+	display:none;
+}
+
+.logoDiv {
+	clear:both;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+.logo {
+	display: inline-block;
+	margin: 0 auto;
+}
+
+
+/** Smaller version for phone displays **/
+
+@media only screen and (max-width: 740px) {
+	.counter {
+		background: url('images/smallbg.png') no-repeat;
+		width:320px;
+		height:377px;
+	}
+	.count {
+		background: url('images/smallinput.png') no-repeat center;
+	}
+
+	.message {
+		font-size:16px;
+	}
+
+	.btns .fullsize { display: none; }
+
+	.btns .small { display: inline-block; }
+	.btns .subBtn .small,
+	.btns .addBtn .small {
+		width: 135px;
+		height:43px;
+	}
+	
+	.btns .small.resetCount,
+	.btns .startVal .small,
+	.btns .renameCounter .small {
+		width: 175px;
+		height: 43px;
+	}
+
+	.btns .row .startVal.leftElement,
+	.btns .row .startValueInput.leftElement,
+	.btns .row .renameCounter.rightElement,
+	.btns .row .renameInput.rightElement {
+		float: none;
+		margin: 0;
+	}
+	.btns .row .centerElement {
+		position: inherit;
+	}
+
+	.setInputBtn {
+		display: inline;
+		position: relative;
+	}
+	input.newStartValue, input.renameInputValue {
+
+	}
+	.setInputBtn .small {
+		display: inline;
+		position: relative;
+		left: -9px;
+		margin-top: 0;
+	}
+	.leftElement .setInputBtn {
+		right: 0;
+	}
+
+
+	.btns input[type=text] {
+		height: 25px;
+		width: 150px;
+		margin: 0;
+		position: relative;
+		left: 20px;
+		top: -17px;
+	}
+
+	.logoDiv { display: none; }
+
+
+}
