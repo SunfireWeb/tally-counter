@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Online Tally Counter, provided by Tally Counter Store</title>
+		<link rel="stylesheet" type="text/css" href="tally/tallystyle.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+
+	<body>
+		<div id="counter0" class="counter" data-counter="0">
+			<div class="name">Tally Counter</div>
+			<div class="count">
+				<div class="message"></div>
+				<div class="tally">0</div>
+			</div>
+			<div class="btns">
+				<div class="row">
+					<div class="subBtn leftElement" type="button">
+		  				<button class="fullsize"></button>
+		  				<button class="small"></button>
+		  			</div>
+					<div class="addBtn rightElement" type="button">
+		  				<button class="fullsize"></button>
+		  				<button class="small"></button>
+		  			</div>
+		  		</div>
+				<div class="row">
+					<button class="resetCount fullsize centerElement" type="button"></button>
+					<button class="resetCount small" type="button"></button>
+				</div>
+				<div class="row">
+					<div class="startVal leftElement" type="button">
+	   					<button class="fullsize"></button>
+	   					<button class="small"></button>
+	   				</div>
+					<div class="startValueInput leftElement" type="button">
+						<div class="inputDiv">
+			   				<input type="text" class="newStartValue" maxlength="10">
+			   				<div class="setInputBtn setStartValueBtn">
+			   					<button class="fullsize"></button>
+			   					<button class="small"></button>
+			   				</div>
+			   			</div>
+		   			</div>
+					<div class="renameCounter rightElement" type="button">
+		   				<button class="fullsize"></button>
+		   				<button class="small"></button>
+		   			</div>
+		   			<div class="renameInput rightElement" type="button">
+			   			<div class="inputDiv">
+			   				<input type="text" class="renameInputValue" maxlength="20">
+				   			<div class="setInputBtn renameInputBtn">
+				   				<button class="fullsize"></button>
+				   				<button class="small"></button>
+				   			</div>
+			   			</div>
+			   		</div>
+		   		</div>
+		   	</div>
+	   		<div class="logoDiv">
+	   			<img class="logo" src="tally/images/logo.png" alt="Tally Counter Store logo">
+	   		</div>
+		</div>
+
+		<!-- leave off for now -->
+		<div id="addCounter">
+			<button id="addNewCounter">Add a Counter</button>
+		</div>
+
+	</body>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="tally/tally.js">	</script>
+</html>
+
